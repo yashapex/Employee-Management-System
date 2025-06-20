@@ -1,0 +1,34 @@
+@import "tailwindcss";
+
+
+
+*{
+    color: white;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert();
+}
+
+button {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+
+body{
+    background-color: #000;
+}
+
+#tasklist::-webkit-scrollbar{
+    display: none;
+}
+
