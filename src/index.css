@@ -1,8 +1,6 @@
 @import "tailwindcss";
 
-
-
-*{
+body{
     color: white;
 }
 
@@ -10,16 +8,16 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   filter: invert();
 }
 
-button {
+.pop-in-out {
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-button:hover {
+.pop-in-out:hover {
   transform: scale(1.05);
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
 }
 
-button:active {
+.pop-in-out:active {
   transform: scale(0.95);
 }
 
@@ -28,7 +26,7 @@ body{
     background-color: #000;
 }
 
-#tasklist::-webkit-scrollbar{
+*::-webkit-scrollbar{
     display: none;
 }
 
