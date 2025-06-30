@@ -1,12 +1,58 @@
-# React + Vite
+Tech Stack: React.js | Context API | JavaScript | CSS | HTML
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Key Highlights
 
-Currently, two official plugins are available:
+🔐 Context‑Driven Authentication – Built a custom AuthProvider.jsx using React Context to manage user sessions and role‑based access (Admin vs. Employee).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🖥️ Dynamic Login Experience – Created a sleek Login.jsx with email/password validation, “show‑password” toggle (FontAwesome eye/eye‑slash), and responsive styling.
 
-## Expanding the ESLint configuration
+✏️ Intuitive Task Creation – Developed CreateTask.jsx form to assign tasks on the fly—complete with title, description, due date, assignee, and category inputs.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+📊 Live Task Dashboard – Dashboard components (AdminDashboard.jsx, EmployeeDashboard.jsx) render real‑time task counts and filter views for New, Active, Completed, and Failed tasks.
+
+🗃️ Local‑Storage‑Backed Data – Simulated persistence using setLocalStorage() / getLocalStorage() utilities to seed and update employees & tasks without a backend.
+
+🎨 UI/UX Polish – Tailwind‑powered layouts, rounded cards, and clear feedback on form submission—ensured a modern, mobile‑friendly interface.
+
+Login Credentials (for Demo)
+
+Role - Admin
+
+Email - admin@me.com
+
+Password - 123
+
+
+
+Role - Arjun
+
+Email - e@e.com
+
+Password - 123
+
+Role - Sneha
+
+Email - employee2@example.com
+
+Password - 123
+
+Role - Ravi
+
+Email - employee3@example.com
+
+Password - 123
+
+Role - Priya
+
+Email - employee4@example.com
+
+Password - 123
+
+Role - Karan
+
+Email - employee5@example.com
+
+Password - 123
+
+Use the Admin credentials to access the Admin panel and manage tasks across all users.
+Use any Employee credentials to access the Employee panel and view your assigned tasks.
