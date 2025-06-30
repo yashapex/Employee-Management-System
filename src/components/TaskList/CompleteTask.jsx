@@ -16,7 +16,7 @@ const CompleteTask = ({data}) => {
           </div>
           
           <div className='mt-4'>
-            <button className=' bg-green-500 rounded py-1 px-2 text-sm w-full'>Completed</button>
+            <button className='pop-in-out bg-green-500 rounded py-1 px-2 text-sm w-full'>Completed</button>
           </div>
     </div>
 

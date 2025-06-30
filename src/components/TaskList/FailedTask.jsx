@@ -16,7 +16,7 @@ const FailedTask = ({data}) => {
           </div>
 
           <div className='mt-4'>
-            <button className='bg-red-400 rounded py-1 px-2 text-sm w-full'>Failed</button>
+            <button className='pop-in-out bg-red-600 rounded py-1 px-2 text-sm w-full'>Failed</button>
           </div>
         </div>
   )
