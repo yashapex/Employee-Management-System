@@ -4,8 +4,7 @@ import { AuthContext } from "../../context/AuthProvider"
 const AllTask = (props) => {
 
     const [userData,setUserData] =  useContext(AuthContext)
-    const [newTask, setNewTask] = useState();
-
+    
   return (
     <div className='p-5 bg-[#1c1c1c] mt-5 rounded'>
         <div className='bg-red-400 mb-2 px-4 py-2 flex  rounded'>
@@ -19,7 +18,7 @@ const AllTask = (props) => {
             const task = element.taskCounts.newTask;
             
             return(
-        <div onClick   
+        <div   
             className=' pop-in-out border border-emerald-300 text-lg font-semibold mb-2 px-4 py-2 flex justify-between rounded '
             key={idx}>
             <h3 className=' w-1/5 text-center ' >{element.firstName}</h3>

@@ -6,7 +6,7 @@ const employees = [
     email: "e@e.com",
     password: "123",
     taskCounts: {
-      active: 2,
+      active: 1,
       newTask: 1,
       completed: 1,
       failed: 1

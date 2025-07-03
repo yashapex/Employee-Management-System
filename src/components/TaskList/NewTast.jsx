@@ -1,6 +1,45 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { AuthContext } from '../../context/AuthProvider';
 
-const NewTast = ({data}) => {
+const NewTast = ({data, id}) => {
+
+    const [userData,setUserData] = useContext(AuthContext);
+
+    const taskAccepted = () =>{
+    
+        const updatedEmployees = userData.map((element) => {
+        if(element.id === id){
+            let hasRun = false;
+            const updatedTask = element.tasks.map((task) => {
+            if(!hasRun && task.newTask){
+                hasRun = true;
+                return{
+                ...task,
+                newTask:false,
+                active: true,
+                };
+                
+            }
+            return task;
+            });
+
+            const updatedCount = {
+            ...element.taskCounts,
+            newTask: element.taskCounts.newTask - 1,
+            active: element.taskCounts.active + 1
+            };
+
+            return {
+            ...element,
+            tasks: updatedTask,
+            taskCounts: updatedCount
+            };
+
+        }
+        return element;
+        });
+        setUserData(updatedEmployees); // ✅ Update the full list
+    }
   return (
     <div className='flex-shrink-0 h-full w-[300px] flex flex-col rounded-xl p-5 bg-green-400'>
 
@@ -16,7 +55,7 @@ const NewTast = ({data}) => {
         </div>
 
         <div className='mt-4'>
-            <button className='pop-in-out bg-red-400 rounded py-1 px-2 text-sm'>Accept Task</button>
+            <button onClick={taskAccepted} className='pop-in-out bg-red-400 rounded py-1 px-2 text-sm'>Accept Task</button>
         </div>
     </div>
   )
