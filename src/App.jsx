@@ -1,9 +1,11 @@
 import React,{useContext, useEffect, useState} from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Login from './components/Auth/Login';
-import { setLocalStorage } from './utils/localStorage';
 import AdminDashboard from './components/Dashboard/AdminDashboard'
 import EmployeeDashboard from './components/Dashboard/EmployeeDashboard'
 import { AuthContext } from './context/AuthProvider';
+import Bypass from './components/Auth/Bypass';
+import DemoLogin from './components/Auth/DemoLogin';
 
 
 
@@ -45,13 +47,25 @@ const App = () => {
   }
 
 
-  return (
-    <>
-    {!user ? <Login handlelogin = {handleLogin}/>: ''}
-    {user == 'admin' ? <AdminDashboard changeUser = {setUser}/> : (user == 'employee' ? <EmployeeDashboard data={loggedInUserData} changeUser = {setUser}/> : null)}
-    
-    </>
-  )
-}
+   return (
+    <Router>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            !user ? (
+              <Login handlelogin={handleLogin} />
+            ) : user === 'admin' ? (
+              <AdminDashboard changeUser={setUser} />
+            ) : (
+              <EmployeeDashboard data={loggedInUserData} changeUser={setUser} />
+            )
+          }
+        />
+        <Route path="/demo-login" element={<DemoLogin/>} />
+      </Routes>
+    </Router>
+  );
+};
 
 export default App;

@@ -3,6 +3,7 @@ import App from '../../App'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons'
 import { faRightToBracket } from '@fortawesome/free-solid-svg-icons'
+import Bypass from './Bypass'
 
 
 const Login = ({handlelogin}) => {
@@ -36,9 +37,9 @@ const Login = ({handlelogin}) => {
     <div className='absolute inset-0 bg-black/60 z-0'></div>
 
     {/* Foreground login box */}
-    <div className="relative z-10 flex items-center justify-center h-full w-full">
+    <div className=" relative z-10 flex items-center justify-center h-full w-full">
 
-        <div className="h-[75%] w-[80%] max-w-2xl bg-[#1c1c1c] border border-emerald-800 rounded-2xl p-10 shadow-lg flex flex-col items-center justify-center gap-16 
+        <div className=" bg-white/10 backdrop-blur-md border border-white/20 h-[75%] w-[80%] max-w-2xl rounded-2xl p-10 shadow-lg flex flex-col items-center justify-center gap-10 
                         fade-up ">
 
           {/* Heading */}
@@ -87,7 +88,7 @@ const Login = ({handlelogin}) => {
                         focus:ring-emerald-300 
                         focus:shadow-[0_0_8px_2px_rgba(16,185,129,0.6)]
                         transition-all duration-300 ' 
-            placeholder='🔒Password'
+            placeholder='🔐Password'
             
         />
         <FontAwesomeIcon 
@@ -109,6 +110,17 @@ const Login = ({handlelogin}) => {
         >
         Log in
         </button>
+
+        <p className="text-sm text-gray-400 mt-5">
+  Need demo credentials?{" "}
+  <a
+    href="/demo-login"
+    className="text-emerald-400 hover:underline hover:text-emerald-300 transition"
+  >
+    Click here
+  </a>
+</p>
+
 
         </form>
         
