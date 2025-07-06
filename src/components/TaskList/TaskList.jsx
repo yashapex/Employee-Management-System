@@ -13,7 +13,7 @@ const TaskList = ({data}) => {
 
   return (
     <div id='tasklist' className='flex flex-col 
-                                  sm:flex-row sm:justify-center
+                                  sm:flex-row 
                                   gap-5 w-full mt-10 py-5 
                                   /* on mobile: let page scroll vertically */
                                   h-auto overflow-visible
