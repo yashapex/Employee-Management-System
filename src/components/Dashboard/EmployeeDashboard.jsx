@@ -8,11 +8,13 @@ import Footer from '../others/Footer';
 const EmployeeDashboard = (props) => {
   return (
     
-    <div className='p-10 bg-[#1C1C1C] h-screen'>
+    <div className='fade-up p-5 bg-[#1C1C1C] h-screen'>
         <Header data={props.data} changeUser = {props.changeUser} />
         <TaskListNumbers data = {props.data} />
         <TaskList data = {props.data}/>
-        <Footer/>
+        <div className="-m-5">
+          <Footer />
+        </div>
     </div>
   )
 }
