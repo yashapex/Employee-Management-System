@@ -39,8 +39,13 @@ const Login = ({handlelogin}) => {
     {/* Foreground login box */}
     <div className=" relative z-10 flex items-center justify-center h-full w-full">
 
-        <div className=" bg-white/10 backdrop-blur-md border border-white/20 h-[75%] w-[80%] max-w-2xl rounded-2xl p-10 shadow-lg flex flex-col items-center justify-center gap-10 
-                        fade-up ">
+        <div className="  bg-white/10 backdrop-blur-md 
+                          border border-white/20 
+                          h-[75%] w-[80%] max-w-2xl 
+                          rounded-2xl p-10 
+                          flex flex-col items-center justify-center gap-10 
+                          fade-up "
+        >
 
           {/* Heading */}
           <h2 className="text-5xl font-poppins font-bold">Log In <FontAwesomeIcon icon={faRightToBracket} className="text-4xl text-emerald-500" />

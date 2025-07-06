@@ -6,20 +6,36 @@ const AllTask = (props) => {
     const [userData,setUserData] =  useContext(AuthContext)
     
   return (
-    <div className='p-5 bg-[#1c1c1c] mt-5 rounded'>
-        <div className='bg-red-400 mb-2 px-4 py-2 flex  rounded'>
-            <h3 className='w-1/5 text-center '>Employee Name</h3>
-            <h3 className='w-1/5 text-center '>New Task</h3>
-            <h3 className='w-1/5 text-center '>Active Task</h3>
-            <h3 className='w-1/5 text-center '>Completed Task</h3>
-            <h3 className='w-1/5 text-center '>Failed Task</h3>
+    <div className='p-5 
+                    bg-white/10 backdrop-blur-md 
+                    mt-5 
+                    rounded'
+    >
+        <div className='bg-emerald-600/20 
+                        text-[10px] sm:text-sm font-semibold 
+                        mb-2 px-2 py-4 
+                        border border-emerald-400
+                        flex items-start justify-center
+                        rounded'
+        >
+            <h3 className='w-1/5 text-center mr-0.5 '>Employee 👤</h3>
+            <h3 className='w-1/5 text-center mr-0.5'> New Task 🆕</h3>
+            <h3 className='w-1/5 text-center mr-0.5'>Active ⚙️ </h3>
+            <h3 className='w-1/5 text-center mr-0.5'>Completed ✅</h3>
+            <h3 className='w-1/5 text-center'>Failed ❌ </h3>
         </div>
         {userData.map((element, idx)=>{
             const task = element.taskCounts.newTask;
             
             return(
         <div   
-            className=' pop-in-out border border-emerald-300 text-lg font-semibold mb-2 px-4 py-2 flex justify-between rounded '
+            className=' pop-in-out 
+                        bg-gradient-to-r from-[#1e293b] to-[#0f172a]
+                        border border-emerald-300 
+                        sm:text-lg font-semibold 
+                        mb-2 px-4 py-2 
+                        flex justify-between 
+                        rounded '
             key={idx}>
             <h3 className=' w-1/5 text-center ' >{element.firstName}</h3>
             <h3 className='w-1/5 text-center text-blue-500' >{element.taskCounts.newTask}</h3>

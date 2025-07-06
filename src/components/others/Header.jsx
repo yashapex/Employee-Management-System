@@ -1,20 +1,38 @@
-import React from 'react'
-import { setLocalStorage } from '../../utils/localStorage'
+import React from 'react';
+import { setLocalStorage } from '../../utils/localStorage';
 
 const Header = (props) => {
+  const logOutUser = () => {
+    localStorage.setItem('loggedInUser', '');
+    props.changeUser('');
+  };
 
-  const logOutUser = () =>{
-    localStorage.setItem('loggedInUser', '')
-    props.changeUser('')
-    
-  }
   return (
-    <div className='flex items-end justify-between'>
-        <h1 className='text-2xl font-semibold'>Hello<br /> <span className='text-3xl font-bold'>{props.data.firstName} 👋</span></h1>
-        <button onClick={logOutUser}
-            className='pop-in-out font-bold cursor-pointer bg-red-600 text-white px-6 py-2 rounded-md'>Log out</button>
-    </div>
-  )
-}
+    <div className="flex items-center justify-between bg-gradient-to-r from-[#1e293b] to-[#0f172a] p-6 rounded-2xl">
+      
+      {/* Greeting */}
+      <div className="leading-snug">
+        <h1 className="text-lg sm:text-xl font-medium text-gray-300">
+          Welcome back,
+        </h1>
+        <h2 className="text-3xl sm:text-4xl font-extrabold text-emerald-400 tracking-tight">
+          {props.data.firstName} 👋
+        </h2>
+      </div>
 
-export default Header
+      {/* Logout Button */}
+      <button
+        onClick={logOutUser}
+        className=" bg-red-600 
+                    pop-in-out 
+                    px-6 py-2 
+                    rounded-full 
+                    font-semibold"
+      >
+        Log out
+      </button>
+    </div>
+  );
+};
+
+export default Header;
