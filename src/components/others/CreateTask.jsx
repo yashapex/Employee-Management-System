@@ -22,7 +22,7 @@ const CreateTask = () => {
       if(assignTo === elem.firstName){
         return{
           ...elem,
-          tasks:[...elem.tasks,newTask],
+          tasks:[newTask, ...elem.tasks],
           taskCounts: {
             ...elem.taskCounts,
             newTask: elem.taskCounts.newTask + 1
