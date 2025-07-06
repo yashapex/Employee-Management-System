@@ -12,7 +12,13 @@ const TaskList = ({data}) => {
   const employee = userData.find(emp => emp.id === data.id);
 
   return (
-    <div id='tasklist' className='h-[50%] overflow-x-auto flex items-center justify-start flex-nowrap gap-5 w-full mt-10 py-5 '>
+    <div id='tasklist' className='flex flex-col 
+                                  sm:flex-row sm:justify-center
+                                  gap-5 w-full mt-10 py-5 
+                                  /* on mobile: let page scroll vertically */
+                                  h-auto overflow-visible
+                                  /* on sm+: fix height and allow inner x-scroll */
+                                  sm:h-auto sm:overflow-x-auto'>
         {employee.tasks.map((element , idx) =>{
 
           const components = [];

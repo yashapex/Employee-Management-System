@@ -7,14 +7,27 @@ import Footer from '../others/Footer';
 
 const EmployeeDashboard = (props) => {
   return (
-    
-    <div className='fade-up p-5 bg-[#1C1C1C] h-screen'>
+    <div className=" fade-up relative w-full">
+
+    {/* Background + dim overlay */}
+    <div className='absolute inset-0 
+                    bg-[url(bg2.jpg)] bg-cover bg-center
+                    before:absolute before:inset-0 before:bg-black/70'
+    />
+
+      {/* Foreground content */}
+      <div className="relative z-10 flex flex-col w-full h-full">
+
         <Header data={props.data} changeUser = {props.changeUser} />
-        <TaskListNumbers data = {props.data} />
-        <TaskList data = {props.data}/>
-        <div className="-m-5">
+        
+        <main className="flex-grow p-2">
+          <TaskListNumbers data = {props.data} />
+          <TaskList data = {props.data}/>
+        </main>
+        
           <Footer />
-        </div>
+          </div>
+          
     </div>
   )
 }

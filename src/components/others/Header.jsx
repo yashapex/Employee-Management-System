@@ -8,7 +8,7 @@ const Header = (props) => {
   };
 
   return (
-    <div className="flex items-center justify-between bg-gradient-to-r from-[#1e293b] to-[#0f172a] p-6 rounded-2xl">
+    <div className="flex items-center justify-between bg-gradient-to-r from-[#1e293b] to-[#0f172a] p-5 ">
       
       {/* Greeting */}
       <div className="leading-snug">

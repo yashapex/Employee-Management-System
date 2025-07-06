@@ -4,6 +4,7 @@ import { AuthContext } from '../../context/AuthProvider'
 const CreateTask = () => {
 
   const [userData, setUserData] = useContext(AuthContext)
+  const [justCreated, setJustCreated] = useState(false);
 
   const [taskTitle, setTaskTitle] = useState("")
   const [taskDescription, setTaskDescription] = useState('')
@@ -44,10 +45,13 @@ const CreateTask = () => {
 
   return (
     <div>
-        <div className=' bg-white/10 backdrop-blur-lg shadow-lg mt-10 p-5 rounded-xl'>
+        <div className=' bg-gray-400/8 border border-gray-600/30 backdrop-blur-lg mt-10 p-5 rounded-xl'>
             <form 
             onSubmit={(e)=>{
-              submitHandler(e)
+              submitHandler(e);
+
+              setJustCreated(true);
+              setTimeout(() => setJustCreated(false), 3000);
             }}
                 className='flex flex-wrap gap-5 '
             >
@@ -115,9 +119,21 @@ const CreateTask = () => {
                   onChange={(e) =>{
                     setTaskDescription(e.target.value)
                   }} 
-                  className='border-1 border-gray-400 rounded px-3 py-1 w-full h-52 mb-5' placeholder='Add your description...'
-                /><br />
-                <button className='pop-in-out bg-emerald-500 rounded w-full py-2 font-semibold'>➕ Create Task</button>
+
+                  className=' border-1 border-gray-400 
+                              rounded 
+                              px-3 py-1 
+                              w-full h-52 
+                              mb-5' 
+                  placeholder='Add your description...'/>
+                  <br />
+                <button className=' pop-in-out 
+                                    bg-emerald-500 
+                                    rounded 
+                                    w-full py-2 
+                                    font-semibold'>
+                  {justCreated ? '✅ Task created' : '➕ Create Task'}
+                </button>
             </div>
             </form>
             

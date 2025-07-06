@@ -8,26 +8,22 @@ const AdminDashboard = (props) => {
   return (
     <div className=" fade-up relative w-full min-h-screen">
       
-      {/* Background image with cover */}
-      <div
-        className="absolute inset-0 bg-center bg-cover bg-no-repeat z-0"
-        style={{ backgroundImage: "url('bg2.jpg')" }}
-      >
-        {/* Dim overlay */}
-        <div className="absolute inset-0 bg-black/50"></div>
-      </div>
+      {/* Background + dim overlay */}
+    <div className='absolute inset-0 
+                    bg-[url(bg2.jpg)] bg-cover bg-center
+                    before:absolute before:inset-0 before:bg-black/70'
+    />
 
       {/* Foreground content */}
-      <div className="relative z-10 p-5">
+      <div className="relative z-10">
         
         <Header data={{ firstName: "Admin" }} changeUser={props.changeUser} />
-        <CreateTask />
-        <AllTask />
-        <div className="-m-5">
+        <main className='p-2'>
+          <CreateTask />
+          <AllTask />
+        </main>
           <Footer />
-        </div>
       </div>
-
     </div>
   )
 }

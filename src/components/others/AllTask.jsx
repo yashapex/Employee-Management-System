@@ -6,8 +6,8 @@ const AllTask = (props) => {
     const [userData,setUserData] =  useContext(AuthContext)
     
   return (
-    <div className='p-5 
-                    bg-white/10 backdrop-blur-md 
+    <div className='p-5
+                    bg-blue-400/10 border border-blue-800/30 backdrop-blur-lg
                     mt-5 
                     rounded'
     >
@@ -31,7 +31,7 @@ const AllTask = (props) => {
         <div   
             className=' pop-in-out 
                         bg-gradient-to-r from-[#1e293b] to-[#0f172a]
-                        border border-emerald-300 
+                         
                         sm:text-lg font-semibold 
                         mb-2 px-4 py-2 
                         flex justify-between 
