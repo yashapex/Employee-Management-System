@@ -45,7 +45,7 @@ const CreateTask = () => {
 
   return (
     <div>
-        <div className=' bg-gray-400/8 border border-gray-600/30 backdrop-blur-lg mt-10 p-5 rounded-xl'>
+        <div className=' bg-gray-400/10 border border-gray-600/30 backdrop-blur-lg mt-10 p-5 rounded-xl'>
             <form 
             onSubmit={(e)=>{
               submitHandler(e);
@@ -57,7 +57,7 @@ const CreateTask = () => {
             >
                 <div className=' sm:w-[48%] w-full space-y-4'>
                 <label className='text-sm !text-gray-300 mb-1 '>Task Title</label>
-                <input 
+                <input
                   value={taskTitle}
                   onChange={ (e) =>{
                     setTaskTitle(e.target.value)
@@ -77,7 +77,7 @@ const CreateTask = () => {
                 /> <br />
 
                 <label className='text-sm !text-gray-300 mb-1 '>Assign to</label>
-                <select 
+                <select required
                   value={assignTo}
                   onChange={ (e) =>{
                     setAssignTo(e.target.value)
