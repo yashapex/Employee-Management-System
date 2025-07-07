@@ -22,35 +22,35 @@ const DemoLogin = () => {
         <div className="grid gap-6 md:grid-cols-2">
           {/* Employee 1 */}
           <div className="bg-[#1c1c1c] p-5 rounded-xl shadow border border-emerald-100">
-            <h2 className="text-lg font-semibold text-emerald-200 mb-1">🧑‍💼 Arjun</h2>
+            <h2 className="text-lg font-semibold text-emerald-200 mb-1">🧑‍💼 Ethan</h2>
             <p>📧 <strong>Email:</strong> e@e.com</p>
             <p>🔐 <strong>Password:</strong> 123</p>
           </div>
 
           {/* Employee 2 */}
           <div className="bg-[#1c1c1c] p-5 rounded-xl shadow border border-emerald-100">
-            <h2 className="text-lg font-semibold text-emerald-200 mb-1">🧑‍💼 Sneha</h2>
+            <h2 className="text-lg font-semibold text-emerald-200 mb-1">🧑‍💼 Emily</h2>
             <p>📧 <strong>Email:</strong> employee2@example.com</p>
             <p>🔐 <strong>Password:</strong> 123</p>
           </div>
 
           {/* Employee 1 */}
           <div className="bg-[#1c1c1c] p-5 rounded-xl shadow border border-emerald-100">
-            <h2 className="text-lg font-semibold text-emerald-200 mb-1">🧑‍💼 Ravi</h2>
+            <h2 className="text-lg font-semibold text-emerald-200 mb-1">🧑‍💼 James</h2>
             <p>📧 <strong>Email:</strong> employee3@example.com</p>
             <p>🔐 <strong>Password:</strong> 123</p>
           </div>
 
           {/* Employee 1 */}
           <div className="bg-[#1c1c1c] p-5 rounded-xl shadow border border-emerald-100">
-            <h2 className="text-lg font-semibold text-emerald-200 mb-1">🧑‍💼 Priya</h2>
+            <h2 className="text-lg font-semibold text-emerald-200 mb-1">🧑‍💼 Olivia</h2>
             <p>📧 <strong>Email:</strong> employee4@example.com</p>
             <p>🔐 <strong>Password:</strong> 123</p>
           </div>
 
           {/* Employee 1 */}
           <div className="bg-[#1c1c1c] p-5 rounded-xl shadow border border-emerald-100">
-            <h2 className="text-lg font-semibold text-emerald-200 mb-1">🧑‍💼 Karan</h2>
+            <h2 className="text-lg font-semibold text-emerald-200 mb-1">🧑‍💼 Logan</h2>
             <p>📧 <strong>Email:</strong> employee5@example.com</p>
             <p>🔐 <strong>Password:</strong> 123</p>
           </div>
