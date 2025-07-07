@@ -16,10 +16,13 @@ const CreateTask = () => {
   const submitHandler = (e) =>{
     e.preventDefault()
 
-    const newTask = ({taskTitle, taskDescription,taskDate, category, active:false, newTask:true, failed:false, completed:false})
+    // const taskCount = tasks.length;
+    // const newTask = ({id:(taskCount + 1) , taskTitle, taskDescription, taskDate, category, active:false, newTask:true, failed:false, completed:false})
 
     const updatedData = userData.map((elem) =>{
       if(assignTo === elem.firstName){
+        const taskCount = elem.tasks.length;
+        const newTask = ({id:(taskCount + 1) , taskTitle, taskDescription, taskDate, category, active:false, newTask:true, failed:false, completed:false})
         return{
           ...elem,
           tasks:[newTask, ...elem.tasks],

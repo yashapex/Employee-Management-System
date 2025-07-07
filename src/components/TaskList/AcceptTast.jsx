@@ -13,10 +13,9 @@ const AcceptTast = ({data, id}) => {
   const taskCompleted = () =>{
     const updatedEmployees = userData.map((element) => {
       if(element.id === id){
-        let hasRun = false;
         const updatedTask = element.tasks.map((task) => {
-          if(!hasRun && task.active){
-            hasRun = true;
+          if(task.id === data.id && task.active){
+            
             return{
               ...task,
               active:false,
@@ -48,7 +47,7 @@ const AcceptTast = ({data, id}) => {
     const updatedEmployees = userData.map((element) => {
       if(element.id === id){
         const updatedTask = element.tasks.map((task) => {
-          if(task.active){
+          if(task.taskTitle === data.taskTitle && task.active){
             return{
               ...task,
               active:false,

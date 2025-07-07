@@ -9,10 +9,8 @@ const NewTast = ({data, id}) => {
     
         const updatedEmployees = userData.map((element) => {
         if(element.id === id){
-            let hasRun = false;
             const updatedTask = element.tasks.map((task) => {
-            if(!hasRun && task.newTask){
-                hasRun = true;
+            if(task.id === data.id && task.newTask){
                 return{
                 ...task,
                 newTask:false,
