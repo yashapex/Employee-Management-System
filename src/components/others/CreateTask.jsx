@@ -45,7 +45,7 @@ const CreateTask = () => {
 
   return (
     <div>
-        <div className=' bg-gray-400/10 border border-gray-600/30 backdrop-blur-lg mt-10 p-5 rounded-xl'>
+        <div className=' bg-blue-400/10 border-2 border-gray-600/30 backdrop-blur-lg mt-10 p-5 rounded-xl'>
             <form 
             onSubmit={(e)=>{
               submitHandler(e);
@@ -55,41 +55,62 @@ const CreateTask = () => {
             }}
                 className='flex flex-wrap gap-5 '
             >
+
                 <div className=' sm:w-[48%] w-full space-y-4'>
-                <label className='text-sm !text-gray-300 mb-1 '>Task Title</label>
+                <label className='text-sm mb-1 '>Task Title</label>
                 <input
                   value={taskTitle}
                   onChange={ (e) =>{
                     setTaskTitle(e.target.value)
-
-                }} 
-                  className='border-1 border-gray-400 rounded px-3 py-1 w-full mb-5' type="text" placeholder='Make a UI design' 
+                  }} 
+                  className='bg-black/10 
+                              border border-blue-400/20
+                              backdrop-blur-sm
+                              placeholder:text-gray-400
+                              rounded px-3 py-2 
+                              w-full 
+                              focus:outline-none focus:ring-2 focus:ring-blue-300
+                              transition-all duration-200'
+                  type="text" placeholder='🛠️ Build dashboard UI' 
                 /> <br/>
 
-                <label className='text-sm !text-gray-300 mb-1 '>Date</label>
+
+                <label className='text-sm mb-1 '>Date</label>
                 <input 
                     value={taskDate}
                     onChange={ (e) =>{
                         setTaskDate(e.target.value)
-
                 }} 
-                className='border-1 border-gray-400 rounded px-3 py-1 w-full mb-5' type="date"
+                className=' bg-black/10 
+                            border border-blue-400/20
+                            backdrop-blur-sm
+                            rounded px-3 py-2 
+                            w-full 
+                            focus:outline-none focus:ring-2 focus:ring-blue-300
+                            transition-all duration-200'
+                type="date"
                 /> <br />
 
-                <label className='text-sm !text-gray-300 mb-1 '>Assign to</label>
+
+                <label className='text-sm mb-1 '>Assign to</label>
                 <select required
                   value={assignTo}
                   onChange={ (e) =>{
                     setAssignTo(e.target.value)
 
                 }} 
-                className=' border-1 border-gray-400 
-                            rounded px-3 py-1 w-full mb-5' type="text" placeholder='employee name'
+                className=' bg-black/10 
+                            border border-blue-400/20
+                            backdrop-blur-sm
+                            rounded px-3 py-2 
+                            w-full 
+                            focus:outline-none focus:ring-2 focus:ring-blue-300
+                            transition-all duration-200'
                 >
                 <option className='bg-[#1c1c1c]'
                         value="" disabled
                 >
-                  Select an employee
+                  🧑‍💼 Choose a team member
                 </option>
 
                 {userData.map((user, index) => (
@@ -101,31 +122,43 @@ const CreateTask = () => {
                 ))}
                 </select>
                  <br />
-                <label className='text-sm !text-gray-300 mb-1 '>Category</label>
+
+
+                <label className='text-sm mb-1 '>Category</label>
                 <input
                   value={category} 
                   onChange={ (e) =>{
                     setCategory(e.target.value)
 
                 }} 
-                className='border-1 border-gray-400 rounded px-3 py-1 w-full mb-5' type="text" placeholder='design, dev, etc...'
+                className=' bg-black/10 
+                            border border-blue-400/20
+                            backdrop-blur-sm
+                            rounded px-3 py-2 
+                            w-full 
+                            focus:outline-none focus:ring-2 focus:ring-blue-300
+                            transition-all duration-200'
+                type="text" 
+                placeholder='🎨design, 💻dev, etc...'
               />
             </div>
                 
             <div className='sm:w-[48%] w-full h-full'>
-                <label className='text-sm !text-gray-300 mb-1'>Description</label>
+                <label className='text-sm mb-1'>Description</label>
                 <textarea
                   value={taskDescription}
                   onChange={(e) =>{
                     setTaskDescription(e.target.value)
                   }} 
 
-                  className=' border-1 border-gray-400 
-                              rounded 
-                              px-3 py-1 
-                              w-full h-52 
-                              mb-5' 
-                  placeholder='Add your description...'/>
+                  className=' bg-black/10 
+                            border border-blue-400/20
+                            backdrop-blur-sm
+                            rounded px-3 py-2 
+                            w-full h-59 mb-1
+                            focus:outline-none focus:ring-2 focus:ring-blue-300
+                            transition-all duration-200' 
+                  placeholder='💬 Briefly explain the task'/>
                   <br />
                 <button className=' pop-in-out 
                                     bg-emerald-500 

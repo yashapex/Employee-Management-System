@@ -3,7 +3,6 @@ import App from '../../App'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons'
 import { faRightToBracket } from '@fortawesome/free-solid-svg-icons'
-import Bypass from './Bypass'
 
 
 const Login = ({handlelogin}) => {

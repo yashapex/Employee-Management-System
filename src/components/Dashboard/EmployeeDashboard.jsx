@@ -10,11 +10,8 @@ const EmployeeDashboard = (props) => {
     <div className=" fade-up relative w-full">
 
     {/* Background + dim overlay */}
-    <div className='absolute inset-0 
-                    bg-[url(bg2.jpg)] bg-cover bg-center
-                    before:absolute before:inset-0 before:bg-black/70'
-    />
-
+    <div className="absolute inset-0 bg-[url('/bg2.jpg')] bg-cover bg-center" />
+    <div className="absolute inset-0 bg-black/40" />
       {/* Foreground content */}
       <div className="relative z-10 flex flex-col w-full h-full">
 
